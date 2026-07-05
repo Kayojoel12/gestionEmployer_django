@@ -1,0 +1,14 @@
+{% extends "employes/layout.html" %}
+
+
+{% block content %}
+<form method="POST" class="space-y-4 flex flex-col">
+    <span  class="text-center btn btn-erro w-full">Es-tu sur de vouloir supprimer <strong>{{supp.nom}}</strong></span>
+    {% csrf_token %}
+    <button type="submit " class="btn btn-error w-full rounded-3xl" >supprimer</button>
+    <a class="btn btn-base-content w-full rounded-3xl" href="{% url 'liste_employes' %}">Annuler</a>
+
+
+</form>
+
+{%endblock %}

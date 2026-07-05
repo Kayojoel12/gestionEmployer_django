@@ -1,0 +1,17 @@
+{% extends "employes/layout.html" %}
+
+
+{% block content %}
+<form method="POST" class="space-y-4">
+    {% csrf_token %}
+    {{form.nom}}
+    {{form.email}}
+    {{form.poste}}
+    {{form.salaire}}
+    <button type="submit" class="btn btn-base-content rounded-2xl">Enregistrer</button>
+
+
+
+</form>
+
+{%endblock %}
