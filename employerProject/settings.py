@@ -83,10 +83,8 @@ WSGI_APPLICATION = 'employerProject.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-    DATABASES = {
-     'default': {
-         dj_database_url.config(default=config('DATABASE_URL'))
-     }
+DATABASES = {
+     'default': {dj_database_url.config(default=config('DATABASE_URL'))}
 }
 
 
